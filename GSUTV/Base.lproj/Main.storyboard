@@ -13,7 +13,7 @@
         <!--LoginView-->
         <scene sceneID="UVY-Bk-nde">
             <objects>
-                <viewController title="LoginView" id="4rG-Uf-dEw" customClass="ViewController" customModule="GSUTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LoginView" id="4rG-Uf-dEw" customClass="LoginVC" customModule="GSUTV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pvs-sa-TiC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,6 +30,9 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="kKT-3s-arc">
                                 <rect key="frame" x="83" y="398" width="209" height="38"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Register" translatesAutoresizingMaskIntoConstraints="NO" id="mz4-oQ-4ek">
+                                <rect key="frame" x="83" y="451" width="209" height="38"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Iku-yf-BAX">
                                 <rect key="frame" x="144.5" y="98" width="86" height="97"/>
@@ -53,7 +56,13 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QM-Pu-GbD" userLabel="Login_button">
                                 <rect key="frame" x="83" y="398" width="209" height="38"/>
                                 <connections>
-                                    <segue destination="exM-Sk-jCl" kind="show" id="ROq-Ek-9iS"/>
+                                    <action selector="LogginBtn:" destination="4rG-Uf-dEw" eventType="touchUpInside" id="dgb-eE-Yvq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnp-nL-qty" userLabel="Register_button">
+                                <rect key="frame" x="83" y="451" width="209" height="38"/>
+                                <connections>
+                                    <action selector="LogginBtn:" destination="4rG-Uf-dEw" eventType="touchUpInside" id="jLC-I5-SZS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,13 +71,18 @@
                             <constraint firstItem="ndC-2N-MiE" firstAttribute="height" secondItem="yk5-3G-pUr" secondAttribute="height" id="1K7-cI-MSb"/>
                             <constraint firstItem="zow-DU-ehs" firstAttribute="trailing" secondItem="CpJ-eb-ZDN" secondAttribute="trailing" constant="23.5" id="1L5-Il-b2v"/>
                             <constraint firstItem="CpJ-eb-ZDN" firstAttribute="top" secondItem="Iku-yf-BAX" secondAttribute="bottom" constant="78" id="1Uu-Kn-qqR"/>
+                            <constraint firstItem="mz4-oQ-4ek" firstAttribute="height" secondItem="0QM-Pu-GbD" secondAttribute="height" id="2L6-a5-5oR"/>
+                            <constraint firstItem="dnp-nL-qty" firstAttribute="top" secondItem="mz4-oQ-4ek" secondAttribute="top" id="AhQ-r2-Utl"/>
                             <constraint firstItem="kKT-3s-arc" firstAttribute="top" secondItem="yk5-3G-pUr" secondAttribute="bottom" constant="50" id="D8w-7d-D7g"/>
                             <constraint firstItem="ndC-2N-MiE" firstAttribute="top" secondItem="CpJ-eb-ZDN" secondAttribute="bottom" constant="11" id="Dgo-jJ-Tsg" userLabel="Pass_text.top = Username.bottom + 17"/>
+                            <constraint firstItem="dnp-nL-qty" firstAttribute="bottom" secondItem="mz4-oQ-4ek" secondAttribute="bottom" id="IS3-k7-sQe"/>
                             <constraint firstItem="0QM-Pu-GbD" firstAttribute="leading" secondItem="kKT-3s-arc" secondAttribute="leading" id="LY9-Ix-fHm"/>
                             <constraint firstItem="kKT-3s-arc" firstAttribute="centerX" secondItem="Pvs-sa-TiC" secondAttribute="centerX" id="MLo-Yz-NeV"/>
                             <constraint firstItem="Iku-yf-BAX" firstAttribute="centerX" secondItem="Pvs-sa-TiC" secondAttribute="centerX" id="Mpg-dr-RC2"/>
                             <constraint firstItem="WIr-mi-FWd" firstAttribute="top" secondItem="CpJ-eb-ZDN" secondAttribute="top" constant="-6" id="NO9-rv-Mux"/>
                             <constraint firstItem="Iku-yf-BAX" firstAttribute="top" secondItem="zow-DU-ehs" secondAttribute="top" constant="78" id="Ncy-8g-vOk"/>
+                            <constraint firstItem="mz4-oQ-4ek" firstAttribute="top" secondItem="0QM-Pu-GbD" secondAttribute="bottom" constant="15" id="OCf-jX-X0f" userLabel="Register.top = Login_button.bottom + 17"/>
+                            <constraint firstItem="dnp-nL-qty" firstAttribute="width" secondItem="mz4-oQ-4ek" secondAttribute="width" id="OSq-cZ-a1r"/>
                             <constraint firstItem="zow-DU-ehs" firstAttribute="trailing" secondItem="WIr-mi-FWd" secondAttribute="trailing" constant="24" id="Qaa-4b-jkR" userLabel="Safe Area.trailing = User_text.trailing + 23.5"/>
                             <constraint firstItem="zow-DU-ehs" firstAttribute="trailing" secondItem="ndC-2N-MiE" secondAttribute="trailing" constant="24" id="TXb-Ob-IAt" userLabel="Safe Area.trailing = Pass_text.trailing + 23.5"/>
                             <constraint firstItem="CpJ-eb-ZDN" firstAttribute="leading" secondItem="zow-DU-ehs" secondAttribute="leading" constant="23.5" id="WoZ-rQ-dsC"/>
@@ -79,16 +93,23 @@
                             <constraint firstItem="WIr-mi-FWd" firstAttribute="leading" secondItem="zow-DU-ehs" secondAttribute="leading" constant="23" id="eXX-OP-r92" userLabel="User_text.leading = Safe Area.leading + 23.5"/>
                             <constraint firstItem="zow-DU-ehs" firstAttribute="trailing" secondItem="ndC-2N-MiE" secondAttribute="trailing" constant="24" id="f3I-98-tus" userLabel="Safe Area.trailing = Pass_text.trailing + 23.5"/>
                             <constraint firstItem="WIr-mi-FWd" firstAttribute="height" secondItem="CpJ-eb-ZDN" secondAttribute="height" id="fmn-kx-EIM"/>
+                            <constraint firstItem="mz4-oQ-4ek" firstAttribute="centerX" secondItem="Pvs-sa-TiC" secondAttribute="centerX" id="iUX-ML-xW8"/>
                             <constraint firstItem="ndC-2N-MiE" firstAttribute="leading" secondItem="zow-DU-ehs" secondAttribute="leading" constant="23" id="mzs-h6-eLf" userLabel="Pass_text.leading = Safe Area.leading + 23.5"/>
                             <constraint firstItem="0QM-Pu-GbD" firstAttribute="centerX" secondItem="Pvs-sa-TiC" secondAttribute="centerX" id="oZy-d9-3gD"/>
                             <constraint firstItem="0QM-Pu-GbD" firstAttribute="top" secondItem="kKT-3s-arc" secondAttribute="top" id="od1-mI-GA1"/>
                             <constraint firstItem="zow-DU-ehs" firstAttribute="trailing" secondItem="yk5-3G-pUr" secondAttribute="trailing" constant="23.5" id="spd-ao-W9R"/>
+                            <constraint firstItem="mz4-oQ-4ek" firstAttribute="height" secondItem="0QM-Pu-GbD" secondAttribute="height" id="vP8-d1-mIB"/>
                             <constraint firstItem="0QM-Pu-GbD" firstAttribute="bottom" secondItem="kKT-3s-arc" secondAttribute="bottom" id="wxF-6E-sZy"/>
                             <constraint firstItem="yk5-3G-pUr" firstAttribute="leading" secondItem="zow-DU-ehs" secondAttribute="leading" constant="23.5" id="xnQ-Yx-ztV"/>
                             <constraint firstItem="0QM-Pu-GbD" firstAttribute="trailing" secondItem="kKT-3s-arc" secondAttribute="trailing" id="xvq-tg-qKW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zow-DU-ehs"/>
                     </view>
+                    <connections>
+                        <outlet property="UIuname" destination="WIr-mi-FWd" id="6tH-oW-cRA"/>
+                        <outlet property="UIupass" destination="ndC-2N-MiE" id="e95-hp-7cS"/>
+                        <segue destination="exM-Sk-jCl" kind="show" identifier="segueLoginLanding" id="Xb7-Xy-Bq4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AcV-Kj-d5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,7 +118,7 @@
         <!--LandingView-->
         <scene sceneID="Xey-aN-hbH">
             <objects>
-                <viewController title="LandingView" modalPresentationStyle="currentContext" id="exM-Sk-jCl" customClass="ViewController" customModule="GSUTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LandingView" modalPresentationStyle="currentContext" id="exM-Sk-jCl" customClass="LandingVC" customModule="GSUTV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sX3-4e-5LD" customClass="UIImageView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -214,6 +235,7 @@
         <image name="Logo" width="86" height="120"/>
         <image name="Password" width="328" height="29"/>
         <image name="Rectangle" width="375" height="667"/>
+        <image name="Register" width="209" height="38"/>
         <image name="Username" width="328" height="29"/>
     </resources>
 </document>
