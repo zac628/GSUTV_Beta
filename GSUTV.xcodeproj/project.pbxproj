@@ -19,6 +19,7 @@
 		928435EF20810624003978AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928435ED20810624003978AC /* LaunchScreen.storyboard */; };
 		928435FA20810624003978AC /* GSUTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928435F920810624003978AC /* GSUTVTests.swift */; };
 		9284360520810624003978AC /* GSUTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284360420810624003978AC /* GSUTVUITests.swift */; };
+		D0A8715121379927009DB62C /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CF7543213798AA00DA2052 /* SQLite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0A8715121379927009DB62C /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
