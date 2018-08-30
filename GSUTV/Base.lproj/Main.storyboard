@@ -13,7 +13,7 @@
         <!--LoginView-->
         <scene sceneID="UVY-Bk-nde">
             <objects>
-                <viewController title="LoginView" id="4rG-Uf-dEw" sceneMemberID="viewController">
+                <viewController title="LoginView" id="4rG-Uf-dEw" customClass="ViewController" customModule="GSUTV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pvs-sa-TiC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,7 +97,7 @@
         <!--LandingView-->
         <scene sceneID="Xey-aN-hbH">
             <objects>
-                <viewController title="LandingView" modalPresentationStyle="currentContext" id="exM-Sk-jCl" sceneMemberID="viewController">
+                <viewController title="LandingView" modalPresentationStyle="currentContext" id="exM-Sk-jCl" customClass="ViewController" customModule="GSUTV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sX3-4e-5LD" customClass="UIImageView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,7 +159,7 @@
         <!--View Controller-->
         <scene sceneID="ze3-PC-sge">
             <objects>
-                <viewController id="lcx-JN-6Y8" sceneMemberID="viewController">
+                <viewController id="lcx-JN-6Y8" customClass="ViewController" customModule="GSUTV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jig-8T-9aX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +174,7 @@
         <!--View Controller-->
         <scene sceneID="Fgj-IQ-cad">
             <objects>
-                <viewController id="HcA-dS-gJ2" sceneMemberID="viewController">
+                <viewController id="HcA-dS-gJ2" customClass="ViewController" customModule="GSUTV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ijM-dg-Aca">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,7 +189,7 @@
         <!--View Controller-->
         <scene sceneID="JYl-Md-W5s">
             <objects>
-                <viewController id="fgD-ls-Lrl" sceneMemberID="viewController">
+                <viewController id="fgD-ls-Lrl" customClass="ViewController" customModule="GSUTV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gE3-Kg-fIo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

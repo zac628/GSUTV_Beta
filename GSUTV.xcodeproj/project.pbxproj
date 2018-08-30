@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9209567B208108B40062BA5D /* Intro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92095676208108B30062BA5D /* Intro.jpg */; };
-		9209567C208108B40062BA5D /* Menu_WithoutBaseline.png in Resources */ = {isa = PBXBuildFile; fileRef = 92095677208108B30062BA5D /* Menu_WithoutBaseline.png */; };
-		9209567D208108B40062BA5D /* Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 92095678208108B30062BA5D /* Login.png */; };
-		9209567E208108B40062BA5D /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 92095679208108B30062BA5D /* Menu.png */; };
-		9209567F208108B40062BA5D /* Landing Page.png in Resources */ = {isa = PBXBuildFile; fileRef = 9209567A208108B30062BA5D /* Landing Page.png */; };
 		928435E520810624003978AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928435E420810624003978AC /* AppDelegate.swift */; };
 		928435E720810624003978AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928435E620810624003978AC /* ViewController.swift */; };
 		928435EA20810624003978AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928435E820810624003978AC /* Main.storyboard */; };
@@ -19,7 +14,8 @@
 		928435EF20810624003978AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928435ED20810624003978AC /* LaunchScreen.storyboard */; };
 		928435FA20810624003978AC /* GSUTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928435F920810624003978AC /* GSUTVTests.swift */; };
 		9284360520810624003978AC /* GSUTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284360420810624003978AC /* GSUTVUITests.swift */; };
-		D0A8715121379927009DB62C /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92CF7543213798AA00DA2052 /* SQLite.framework */; };
+		92CF755821379CDA00DA2052 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A8712E213791F7009DB62C /* libsqlite3.tbd */; };
+		92CF755C2137A65A00DA2052 /* GSUTVdb.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 92CF755B2137A65A00DA2052 /* GSUTVdb.sqlite3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,11 +85,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		92095676208108B30062BA5D /* Intro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Intro.jpg; path = ../../GSUTV/GSUTV/Images/Intro.jpg; sourceTree = "<group>"; };
-		92095677208108B30062BA5D /* Menu_WithoutBaseline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Menu_WithoutBaseline.png; path = ../../GSUTV/GSUTV/Images/Menu_WithoutBaseline.png; sourceTree = "<group>"; };
-		92095678208108B30062BA5D /* Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Login.png; path = ../../GSUTV/GSUTV/Images/Login.png; sourceTree = "<group>"; };
-		92095679208108B30062BA5D /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Menu.png; path = ../../GSUTV/GSUTV/Images/Menu.png; sourceTree = "<group>"; };
-		9209567A208108B30062BA5D /* Landing Page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Landing Page.png"; path = "../../GSUTV/GSUTV/Images/Landing Page.png"; sourceTree = "<group>"; };
 		928435E120810624003978AC /* GSUTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSUTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928435E420810624003978AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		928435E620810624003978AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +99,7 @@
 		9284360420810624003978AC /* GSUTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSUTVUITests.swift; sourceTree = "<group>"; };
 		9284360620810624003978AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92CF7538213798A900DA2052 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		92CF755B2137A65A00DA2052 /* GSUTVdb.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GSUTVdb.sqlite3; sourceTree = SOURCE_ROOT; };
 		D0A8712E213791F7009DB62C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -116,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0A8715121379927009DB62C /* SQLite.framework in Frameworks */,
+				92CF755821379CDA00DA2052 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,11 +136,6 @@
 				928435F820810624003978AC /* GSUTVTests */,
 				9284360320810624003978AC /* GSUTVUITests */,
 				928435E220810624003978AC /* Products */,
-				92095676208108B30062BA5D /* Intro.jpg */,
-				9209567A208108B30062BA5D /* Landing Page.png */,
-				92095678208108B30062BA5D /* Login.png */,
-				92095677208108B30062BA5D /* Menu_WithoutBaseline.png */,
-				92095679208108B30062BA5D /* Menu.png */,
 				D0A8712D213791F7009DB62C /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -166,6 +153,7 @@
 		928435E320810624003978AC /* GSUTV */ = {
 			isa = PBXGroup;
 			children = (
+				92CF755B2137A65A00DA2052 /* GSUTVdb.sqlite3 */,
 				928435E420810624003978AC /* AppDelegate.swift */,
 				928435E620810624003978AC /* ViewController.swift */,
 				928435E820810624003978AC /* Main.storyboard */,
@@ -382,14 +370,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9209567B208108B40062BA5D /* Intro.jpg in Resources */,
-				9209567E208108B40062BA5D /* Menu.png in Resources */,
 				928435EF20810624003978AC /* LaunchScreen.storyboard in Resources */,
+				92CF755C2137A65A00DA2052 /* GSUTVdb.sqlite3 in Resources */,
 				928435EC20810624003978AC /* Assets.xcassets in Resources */,
-				9209567C208108B40062BA5D /* Menu_WithoutBaseline.png in Resources */,
-				9209567F208108B40062BA5D /* Landing Page.png in Resources */,
 				928435EA20810624003978AC /* Main.storyboard in Resources */,
-				9209567D208108B40062BA5D /* Login.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
