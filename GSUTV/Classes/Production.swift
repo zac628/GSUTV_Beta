@@ -9,7 +9,6 @@
 import Foundation
 
 class Production {
-    let id: Int64?
     var code: String
     var name: String
     var date: String
@@ -17,7 +16,6 @@ class Production {
     var notes: String
     
     init(id: Int64) {
-        self.id = id
         code = ""
         name = ""
         date = ""
@@ -25,8 +23,7 @@ class Production {
         notes = ""
     }
     
-    init(id: Int64, code: String, name: String, date: String, location: String, notes: String) {
-        self.id = id
+    init(code: String, name: String, date: String, location: String, notes: String) {
         self.code = code
         self.name = name
         self.date = date
