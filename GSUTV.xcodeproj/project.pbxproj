@@ -20,6 +20,9 @@
 		928435EF20810624003978AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928435ED20810624003978AC /* LaunchScreen.storyboard */; };
 		928435FA20810624003978AC /* GSUTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928435F920810624003978AC /* GSUTVTests.swift */; };
 		9284360520810624003978AC /* GSUTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284360420810624003978AC /* GSUTVUITests.swift */; };
+		92CA8DA021389AFE00256DFD /* Production.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA8D9F21389AFE00256DFD /* Production.swift */; };
+		92CA8DA921389C1A00256DFD /* ProdTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA8DA821389C1A00256DFD /* ProdTools.swift */; };
+		92CA8DAB2138AE0900256DFD /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CA8DAA2138AE0900256DFD /* PopUpViewController.swift */; };
 		92CF755821379CDA00DA2052 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A8712E213791F7009DB62C /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +113,9 @@
 		9284360020810624003978AC /* GSUTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GSUTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9284360420810624003978AC /* GSUTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSUTVUITests.swift; sourceTree = "<group>"; };
 		9284360620810624003978AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92CA8D9F21389AFE00256DFD /* Production.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Production.swift; sourceTree = "<group>"; };
+		92CA8DA821389C1A00256DFD /* ProdTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdTools.swift; sourceTree = "<group>"; };
+		92CA8DAA2138AE0900256DFD /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		92CF7538213798A900DA2052 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		D0A8712E213791F7009DB62C /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -145,6 +151,8 @@
 			children = (
 				920AB1792137D0FE00D9E6A8 /* Examples */,
 				920AB1732137BAAC00D9E6A8 /* User.swift */,
+				92CA8D9F21389AFE00256DFD /* Production.swift */,
+				92CA8DA821389C1A00256DFD /* ProdTools.swift */,
 				920AB16F2137B74700D9E6A8 /* Login.swift */,
 			);
 			path = Classes;
@@ -155,6 +163,7 @@
 			children = (
 				9210387721385E1E0002302D /* CreateProductionVC.swift */,
 				928435E620810624003978AC /* LoginVC.swift */,
+				92CA8DAA2138AE0900256DFD /* PopUpViewController.swift */,
 				920AB1752137CEB000D9E6A8 /* LandingVC.swift */,
 			);
 			path = ViewControllers;
@@ -438,11 +447,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92CA8DA921389C1A00256DFD /* ProdTools.swift in Sources */,
 				920AB1612137B20800D9E6A8 /* StephencelisDB.swift in Sources */,
 				928435E720810624003978AC /* LoginVC.swift in Sources */,
+				92CA8DAB2138AE0900256DFD /* PopUpViewController.swift in Sources */,
 				920AB1742137BAAC00D9E6A8 /* User.swift in Sources */,
 				920AB1762137CEB000D9E6A8 /* LandingVC.swift in Sources */,
 				920AB1722137BA8D00D9E6A8 /* Contact.swift in Sources */,
+				92CA8DA021389AFE00256DFD /* Production.swift in Sources */,
 				928435E520810624003978AC /* AppDelegate.swift in Sources */,
 				920AB1702137B74700D9E6A8 /* Login.swift in Sources */,
 				9210387821385E1E0002302D /* CreateProductionVC.swift in Sources */,

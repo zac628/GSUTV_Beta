@@ -15,7 +15,7 @@ class Login{
     let username = Expression<String?>("username")
     let password = Expression<String>("password")
     
-    static let instance = StephencelisDB()
+    static let instance = Login()
     let db: Connection?
     
     init() {

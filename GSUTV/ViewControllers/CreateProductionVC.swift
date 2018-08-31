@@ -10,6 +10,24 @@ import UIKit
 
 class CreateProductionVC: UIViewController {
 
+    @IBOutlet weak var UIprodname: UITextField!
+    @IBOutlet weak var UIdate: UIDatePicker!
+    @IBOutlet weak var UIlocation: UITextField!
+    @IBOutlet weak var UInotes: UITextView!
+    
+    
+    @IBAction func DontBtn(_ sender: Any) {
+        ProdTools().addProd(iname: UIprodname.text!, idate: UIdate.date.description, ilocation: UIlocation.text!, inotes: UInotes.text!, icode: "temp")
+        
+        let popUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProdIdPopUp") as! PopUpViewController
+        self.addChildViewController(popUp)
+        popUp.view.frame = self.view.frame
+        self.view.addSubview(popUp.view)
+        popUp.didMove(toParentViewController: self)
+        
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
