@@ -24,7 +24,7 @@ class Login{
             ).first!
         
         do {
-            db = try Connection("/Users/justin/XCode/gsutvapp/GSUTV/GSUTVdb.sqlite3")
+            db = try Connection("/Users/Zach/Projects/GSUTV_Swift/GSUTV/GSUTVdb.sqlite3")
         } catch {
             db = nil
             print ("Unable to open database")

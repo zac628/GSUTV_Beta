@@ -27,7 +27,7 @@ class ProdTools{
             ).first!
         
         do {
-            db = try Connection("/Users/Zach/Projects/GSUTV_Swift/GSUTV/GSUTV/GSUTVdb.sqlite3")
+            db = try Connection("/Users/Zach/Projects/GSUTV_Swift/GSUTV/GSUTVdb.sqlite3")
         } catch {
             db = nil
             print ("Unable to open database")
