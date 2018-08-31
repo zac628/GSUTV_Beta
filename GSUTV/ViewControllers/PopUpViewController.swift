@@ -15,7 +15,7 @@ class PopUpViewController: UIViewController {
     
     @IBAction func UIpidbtn(_ sender: Any) {
         if(ProdTools().updateProduction(ccode: "temp", newCode: UIprodid.text!) == true){
-             dismiss(animated: true, completion: nil)
+            performSegue(withIdentifier: "segueCreatePositions", sender: nil)
         }else{
             print("fail")
         }

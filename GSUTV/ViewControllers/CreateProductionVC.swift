@@ -25,8 +25,6 @@ class CreateProductionVC: UIViewController {
         self.view.addSubview(popUp.view)
         popUp.didMove(toParentViewController: self)
         
-        
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()

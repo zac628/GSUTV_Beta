@@ -96,7 +96,6 @@
 
 /* Begin PBXFileReference section */
 		920AB1602137B20800D9E6A8 /* StephencelisDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StephencelisDB.swift; sourceTree = "<group>"; };
-		920AB16E2137B69C00D9E6A8 /* GSUTVdb.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GSUTVdb.sqlite3; sourceTree = "<group>"; };
 		920AB16F2137B74700D9E6A8 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		920AB1712137BA8D00D9E6A8 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		920AB1732137BAAC00D9E6A8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -211,7 +210,6 @@
 				920AB1782137D0DC00D9E6A8 /* ViewControllers */,
 				920AB1772137D0C400D9E6A8 /* Classes */,
 				928435E420810624003978AC /* AppDelegate.swift */,
-				920AB16E2137B69C00D9E6A8 /* GSUTVdb.sqlite3 */,
 				928435E820810624003978AC /* Main.storyboard */,
 				928435EB20810624003978AC /* Assets.xcassets */,
 				928435ED20810624003978AC /* LaunchScreen.storyboard */,
