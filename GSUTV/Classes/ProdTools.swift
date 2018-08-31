@@ -52,7 +52,6 @@ class ProdTools{
         do {
             for prod in try db!.prepare(self.Productions) {
                 Productions.append(Production(
-                    id: prod[id],
                     code: prod[code],
                     name: prod[name]!,
                     date: prod[date],
@@ -68,10 +67,32 @@ class ProdTools{
         }
         return Productions
     }
-    func check(iname: String,iid: Int64) -> Bool{
+    
+    func getProductionStrings() -> [String] {
+        var Productions = [Production]()
+        var temp = [String]()
+        do {
+            for prod in try db!.prepare(self.Productions) {
+                Productions.append(Production(
+                    code: prod[code],
+                    name: prod[name]!,
+                    date: prod[date],
+                    location: prod[location],
+                    notes: prod[notes]))
+            }
+             for item in Productions{
+                temp.append(item.name)
+             }
+        } catch {
+            print("Select failed")
+        }
+        return temp
+    }
+    
+    func check(iname: String,iid: String) -> Bool{
         let creds = getProductions()
         for prod in creds{
-            if(iname == prod.name && iid == prod.id){
+            if(iname == prod.name && iid == prod.code){
                 return true
             }
         }
