@@ -13,7 +13,7 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var data = ["John","mark","penis","stuff"]
     var list = ProdTools().getProductionStrings()
     //var temp = [String]()
-    
+     var textToBeSent = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,19 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             temp.append(item.name)
         }*/
         // Do any additional setup after loading the view.
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let temp = list[indexPath.row]
+        let del = "."
+        var new = temp.components(separatedBy: del)
+        textToBeSent = new[0]
+        self.performSegue(withIdentifier: "segueListRequest", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let info = segue.destination as! RequestVC
+        info.myString = textToBeSent
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -36,6 +49,10 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 
+    @IBAction func ForwardBtn(_ sender: Any) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

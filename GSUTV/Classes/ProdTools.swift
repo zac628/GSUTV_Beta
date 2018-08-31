@@ -104,8 +104,57 @@ class ProdTools{
                 else {
                     print("There was an error decoding the string")
                 }
-                temp.append(item.name + "  |  " + bleh + "  |   \(item.positions)")
+                temp.append(item.name + ".  |  " + bleh + "  |   \(item.positions)")
              }
+        } catch {
+            print("Select failed")
+        }
+        return temp
+    }
+    
+    func getPositionStrings(cname: String) -> [String] {
+        var Productions = [Production]()
+        var temp = [String]()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss +0000"
+        dateFormatterPrint.dateFormat = "MM/dd/yyyy  |  HH:mm"
+        
+        do {
+            for prod in try db!.prepare(self.Productions) {
+                Productions.append(Production(
+                    name: prod[name]!,
+                    code: prod[code],
+                    date: prod[date],
+                    positions: prod[positions],
+                    camera: prod[camera],
+                    director: prod[director],
+                    producer: prod[producer],
+                    audio: prod[audio],
+                    dit: prod[dit],
+                    pa: prod[pa],
+                    grip: prod[grip]))
+            }
+            var bleh = String()
+            for item in Productions{
+                if(item.name == cname){
+                    temp.append(item.name)  //0
+                    temp.append(item.code)  //1
+                    if let date2 = dateFormatterGet.date(from: item.date){
+                        bleh = dateFormatterPrint.string(from: date2)
+                    }
+                    else {
+                        print("There was an error decoding the string")
+                    }
+                    temp.append(bleh)  //2
+                    //temp.append(item.date)
+                    temp.append(String(item.camera)) //3
+                    temp.append(String(item.director))  //4
+                    temp.append(String(item.producer))  //5
+                    temp.append(String(item.audio))  //6
+                    temp.append(String(item.dit))  //7
+                    temp.append(String(item.pa))  //8
+                    temp.append(String(item.grip))  //9
+                }
+            }
         } catch {
             print("Select failed")
         }

@@ -38,4 +38,20 @@ class Production {
         pa = 0
         grip = 0
     }
+    
+    init(name: String, code: String, date: String, positions: Int64, camera: Int64, director:Int64, producer: Int64, audio: Int64, dit: Int64, pa: Int64, grip: Int64){
+        self.code = code
+        self.name = name
+        self.date = date
+        location = ""
+        notes = ""
+        self.positions = positions
+        self.camera = camera
+        self.director = director
+        self.producer = producer
+        self.audio = audio
+        self.dit = dit
+        self.pa = pa
+        self.grip = grip
+    }
 }
