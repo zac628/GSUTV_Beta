@@ -17,7 +17,7 @@ class CreateProductionVC: UIViewController {
     
     
     @IBAction func DontBtn(_ sender: Any) {
-        ProdTools().addProd(iname: UIprodname.text!, idate: UIdate.date.description, ilocation: UIlocation.text!, inotes: UInotes.text!, icode: "temp")
+        ProdTools().addProd(iname: UIprodname.text!, idate: UIdate.date.description, ilocation: UIlocation.text!, inotes: UInotes.text!, icode: "temp", ipositions: -1)
         
         let popUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProdIdPopUp") as! PopUpViewController
         self.addChildViewController(popUp)

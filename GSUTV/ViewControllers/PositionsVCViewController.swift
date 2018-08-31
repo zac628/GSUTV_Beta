@@ -55,7 +55,9 @@ class PositionsVCViewController: UIViewController {
         txtGrip.text = String(num)
     }
     @IBAction func submit(_ sender: UIButton) {
-        
+        var count = Int(txtCamera.text!)! + Int(txtPA.text!)! + Int(txtDIT.text!)! + Int(txtGrip.text!)! + Int(txtAudio.text!)! + Int(txtDirector.text!)! + Int(txtProducer.text!)!
+        ProdTools().updatePositions(cpositions: -1, newPositions: Int64(count), newCamera: Int64(Int(txtCamera.text!)!), newDirector: Int64(txtDirector.text!)!, newProducer: Int64(txtProducer.text!)!, newAudio: Int64(txtAudio.text!)!, newDit: Int64(txtDIT.text!)!, newPa: Int64(txtPA.text!)!, newGrip: Int64(txtGrip.text!)!)
+        performSegue(withIdentifier: "seguePositionsLanding", sender: nil)
     }
     
     override func viewDidLoad() {

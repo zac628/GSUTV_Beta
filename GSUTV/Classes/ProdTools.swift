@@ -17,6 +17,17 @@ class ProdTools{
     let date = Expression<String>("date")
     let location = Expression<String>("location")
     let notes = Expression<String>("notes")
+    let positions = Expression<Int64>("positions")
+    let camera = Expression<Int64>("camera")
+    let director = Expression<Int64>("director")
+    let producer = Expression<Int64>("producer")
+    let audio = Expression<Int64>("audio")
+    let dit = Expression<Int64>("dit")
+    let pa = Expression<Int64>("pa")
+    let grip = Expression<Int64>("grip")
+    
+    let dateFormatterGet = DateFormatter()
+    let dateFormatterPrint = DateFormatter()
     
     static let instance = ProdTools()
     let db: Connection?
@@ -35,9 +46,9 @@ class ProdTools{
         }
     }
     
-    func addProd(iname: String, idate: String, ilocation: String, inotes: String, icode: String) -> Int64? {
+    func addProd(iname: String, idate: String, ilocation: String, inotes: String, icode: String, ipositions: Int64 ) -> Int64? {
         do {
-            let insert = Productions.insert(name <- iname, date <- idate, location <- ilocation, notes <- inotes, code <- icode)
+            let insert = Productions.insert(name <- iname, date <- idate, location <- ilocation, notes <- inotes, code <- icode, positions <- -1)
             let id = try db!.run(insert)
             
             print(insert.asSQL())
@@ -56,7 +67,8 @@ class ProdTools{
                     name: prod[name]!,
                     date: prod[date],
                     location: prod[location],
-                    notes: prod[notes]))
+                    notes: prod[notes],
+                    positions: prod[positions]))
             }
             /*//TEST PRINT
              for item in Productions{
@@ -71,6 +83,9 @@ class ProdTools{
     func getProductionStrings() -> [String] {
         var Productions = [Production]()
         var temp = [String]()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd HH:mm:ss +0000"
+        dateFormatterPrint.dateFormat = "MM/dd/yyyy HH:mm"
+        
         do {
             for prod in try db!.prepare(self.Productions) {
                 Productions.append(Production(
@@ -78,10 +93,18 @@ class ProdTools{
                     name: prod[name]!,
                     date: prod[date],
                     location: prod[location],
-                    notes: prod[notes]))
+                    notes: prod[notes],
+                    positions:prod[positions]))
             }
+            var bleh = String()
              for item in Productions{
-                temp.append(item.name)
+                if let date2 = dateFormatterGet.date(from: item.date){
+                    bleh = dateFormatterPrint.string(from: date2)
+                }
+                else {
+                    print("There was an error decoding the string")
+                }
+                temp.append(item.name + "  |  " + bleh + "  |   \(item.positions)")
              }
         } catch {
             print("Select failed")
@@ -103,6 +126,28 @@ class ProdTools{
         do {
             let update = prod.update([
                 code <- newCode
+                ])
+            if try db!.run(update) > 0 {
+                print(update.asSQL())
+                return true
+            }
+        } catch {
+            print("Update failed: \(error)")
+        }
+        return false
+    }
+    func updatePositions(cpositions: Int64, newPositions: Int64, newCamera: Int64, newDirector: Int64, newProducer: Int64, newAudio: Int64, newDit: Int64, newPa: Int64, newGrip: Int64) -> Bool {
+        let prod = Productions.filter(positions == cpositions)
+        do {
+            let update = prod.update([
+                positions <- newPositions,
+                camera <- newCamera,
+                director <- newDirector,
+                producer <- newProducer,
+                audio <- newAudio,
+                dit <- newDit,
+                pa <- newPa,
+                grip <- newGrip
                 ])
             if try db!.run(update) > 0 {
                 print(update.asSQL())
